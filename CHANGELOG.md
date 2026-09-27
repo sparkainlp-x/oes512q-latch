@@ -2,6 +2,11 @@
 
 All notable changes to this project. Evidence tags follow the README (SYNTHETIC / REPORTED / TARGET / UNRUN).
 
+## Unreleased
+
+### Changed
+- `.zenodo.json` adds the `spark-ai-nlp` Zenodo community, so future releases are archived there.
+
 ## 0.2.0 — 2026-09-27
 
 ### Added
