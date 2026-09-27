@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oes512q"
+version = "0.2.0"
+description = "OES-32 / OES-512 classical residual latch (fixed or self-calibrated threshold) with an optional amplitude-encoded feature vector. Research prototype; not a stabilizer QEC code."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Jean-François Brisson" }]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "ruff>=0.9"]
+# Benchmark harness only (benchmarks/); the core modules stay standard-library only.
+bench = ["numpy>=1.24", "scikit-learn>=1.3", "scipy>=1.10", "matplotlib>=3.7"]
+
+[project.urls]
+Homepage = "https://sparkainlpx.xyz"
+Repository = "https://github.com/sparkainlp-x/oes512q-latch"
+Changelog = "https://github.com/sparkainlp-x/oes512q-latch/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+py-modules = ["oes32_hilbert_hook", "oes512_hilbert_hook", "oes512_stabilizers", "oes_calibration"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# `value == pytest.approx(expected)` is the idiomatic pytest form.
+"tests/*" = ["SIM300"]

@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Demo outputs are SYNTHETIC; quantum-hardware and operational performance is UNRUN (not claimed)."
+title: "oes512q-latch: OES-32 / OES-512 classical residual latch with a self-calibrated threshold and an optional amplitude-encoded feature vector"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    affiliation: "Spark AI NLP"
+repository-code: "https://github.com/sparkainlp-x/oes512q-latch"
+url: "https://sparkainlpx.xyz"
+license: MIT
+version: "0.2.0"
+abstract: >-
+  Standard-library Python research prototype. OES-32 scores a 32-channel block
+  with S = 0.45·Peak + 0.35·RMS + 0.20·MeanAbs and latches at S ≥ τ (default
+  τ = 0.50); OES-512 applies the same latch to 16 contiguous blocks of 32 to
+  form a 16-bit coarse syndrome. Version 0.2.0 adds an optional, label-free
+  self-calibrated τ (warm-up 99th percentile of block scores on robust-scaled
+  residuals); the fixed default τ = 0.50 is retained. After the classical latch, an optional
+  amplitude encoding maps the normalized vector to a 5-qubit (OES-32) or
+  9-qubit (OES-512) feature state, with diagonal block projectors
+  S_i = I − 2Π_i and Pauli-Z expectations for comparison. This is not a
+  stabilizer QEC code, not a 32- or 512-qubit Hilbert space, and has not been
+  run on quantum hardware. The normative residual contract is oes32-residual
+  (ADR-001).
+keywords:
+  - oes512
+  - oes32
+  - residual
+  - weighted latch
+  - amplitude encoding
+  - research prototype
+references:
+  - type: software
+    title: "oes32-residual: normative OES-32 residual reference (ADR-001)"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/oes32-residual"
+    commit: "b77b61254f15778c6ae221843dceac7a8571158e"
+  - type: software
+    title: "oes512-residual: OES-512 reference implementation and seed-42 synthetic benchmark"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/oes512-residual"

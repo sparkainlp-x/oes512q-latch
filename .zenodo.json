@@ -1,0 +1,48 @@
+{
+  "upload_type": "software",
+  "title": "oes512q-latch: OES-32 / OES-512 classical residual latch with a self-calibrated threshold (OES latch v2) and a NAB benchmark",
+  "description": "<p>Standard-library Python research prototype of the OES-32 / OES-512 classical residual latch. A 32-value residual block is scored with S = 0.45·Peak + 0.35·RMS + 0.20·MeanAbs and latches when S ≥ τ. OES-512 applies the same latch to 16 contiguous blocks of 32, which gives a 16-bit coarse syndrome. The fixed default τ = 0.50 is retained. <strong>OES latch v2</strong> (<code>oes_calibration</code>) adds an optional, label-free, self-calibrated τ: the 0.99 quantile of warm-up block scores on robust-scaled residuals (1.4826·MAD, with a mean-absolute-deviation fallback). It fails closed on invalid input. An optional amplitude-encoded feature vector (5 or 9 qubits' worth of amplitudes, a classical list) is provided as a software sidecar after the classical latch.</p><p><strong>Benchmark.</strong> The package includes a reproducible block-level benchmark on the 47 labelled real-data series of the Numenta Anomaly Benchmark (NAB, MIT license, pinned commit, SHA-256 manifest). It compares the latch with rolling z-score, CUSUM and IsolationForest using warm-up-calibrated thresholds, paired statistics, block-size sensitivity, IsolationForest seed robustness and NAB's official scorer on a sub-corpus. The results are mixed and reported honestly. CUSUM has the best block F1. The latch has the best mean average precision, but not significantly better than CUSUM. The rolling z-score beats the latch on the NAB score. The fixed τ = 0.50 behaves like flagging every block on this data.</p><p><strong>Evidence tags.</strong> Demo outputs and unit tests: <strong>SYNTHETIC</strong>. NAB benchmark numbers: <strong>REPORTED</strong> (measured on public data; results.json records the SHA-256 hashes of the code that produced them). Self-calibrated τ as a contract extension: <strong>TARGET</strong>. Operation on live telemetry or hardware: <strong>UNRUN</strong> (not claimed).</p><p><strong>Relationship to ADR-001.</strong> The normative per-block residual remains <a href=\"https://github.com/sparkainlp-x/oes32-residual/tree/b77b61254f15778c6ae221843dceac7a8571158e\">oes32-residual@b77b612</a>. The weighted latch and its self-calibrated τ are an extension in this repository.</p><p><strong>Scope and limits.</strong> Research prototype. It is not a stabilizer quantum error-correcting code, not a 32- or 512-qubit Hilbert space, and has not been run on quantum hardware, a QPU or a cloud quantum service. It is not a certified safety system, a medical device, field telemetry or a commercial product. No production-readiness claim is made.</p><p>Evidence tags follow <a href=\"https://github.com/sparkainlp-x/.github#evidence-tags\">sparkainlp-x/.github</a> (SYNTHETIC / REPORTED / TARGET / UNRUN).</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "affiliation": "Spark AI NLP"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "OES-32",
+    "OES-512",
+    "residual",
+    "weighted latch",
+    "self-calibrated threshold",
+    "anomaly detection",
+    "Numenta Anomaly Benchmark",
+    "benchmark",
+    "Python",
+    "research software"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sparkainlp-x/oes512q-latch",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985520",
+      "relation": "references",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985532",
+      "relation": "references",
+      "resource_type": "software"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "spark-ai-nlp"
+    }
+  ],
+  "language": "eng"
+}

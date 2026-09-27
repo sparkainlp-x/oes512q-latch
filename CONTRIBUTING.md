@@ -1,0 +1,5 @@
+# Contributing
+
+Changes must preserve the 16 × 32 block layout, the weighted score $S = 0.45\cdot\text{Peak} + 0.35\cdot\text{RMS} + 0.20\cdot\text{Mean}|x|$, the $S \ge \tau$ latch rule (with the fixed default $\tau = 0.50$ and the optional self-calibrated $\tau$ of `oes_calibration`), and the order "classical latch first, optional feature encode second". Include tests for externally observable behavior and run `ruff check .`, `ruff format --check .` and `python -m pytest` before opening a pull request. Do not report fabricated benchmark or simulation results as measured performance; tag every reported number SYNTHETIC, REPORTED (measured on a named public dataset), TARGET or UNRUN and record the seed, configuration, environment and command.
+
+Pull requests that change scoring, latch, admission, validation or encoding behavior should explain the affected invariant and include both an accepting and a rejecting test case. Do not describe this code as a stabilizer QEC code, a 32- or 512-qubit Hilbert space, or as run on quantum hardware.
