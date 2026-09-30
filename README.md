@@ -3,7 +3,7 @@
 Standard-library Python research prototype for the **OES-32 / OES-512 classical residual latch**, with an **optional amplitude-encoded feature vector** (5 qubits for OES-32, 9 for OES-512) and diagonal block observables $S_i = I - 2\Pi_i$ for comparison. The classical latch always runs first; the encoding is a software sidecar.
 
 [![CI](https://github.com/sparkainlp-x/oes512q-latch/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkainlp-x/oes512q-latch/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Status: research prototype](https://img.shields.io/badge/status-research%20prototype-orange.svg)](#what-it-is-not)
 [![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-blue.svg)](#evidence-tags)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22998570.svg)](https://doi.org/10.5281/zenodo.22998570)
@@ -382,6 +382,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
 
 ## License
 
-MIT License © 2026 Jean-François Brisson / Spark AI NLP. See [LICENSE](LICENSE).
+This software is available under the GNU Affero General Public License v3.0 only (AGPL-3.0-only); see [LICENSE](LICENSE).
+
+Organizations that want to use it in proprietary products or services without AGPL obligations can contact the author about a commercial license via https://sparkainlpx.xyz.
+
+Versions published before 2026-09-29 were released under the MIT License and remain available under those terms.
 
 Author: Jean-François Brisson / Spark AI NLP · https://sparkainlpx.xyz
