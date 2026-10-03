@@ -2,6 +2,8 @@
 
 Standard-library Python research prototype for the **OES-32 / OES-512 classical residual latch**, with an **optional amplitude-encoded feature vector** (5 qubits for OES-32, 9 for OES-512) and diagonal block observables $S_i = I - 2\Pi_i$ for comparison. The classical latch always runs first; the encoding is a software sidecar.
 
+**In plain English:** a transparent, fixed-weight score that flags which 32-sample blocks of a signal look anomalous, benchmarked against standard detectors on public NAB data (it ranks blocks best by average precision but loses to CUSUM on F1). **Quick start** (Python ≥ 3.10, standard library only): `git clone https://github.com/sparkainlp-x/oes512q-latch.git && cd oes512q-latch && python oes512_hilbert_hook.py`; tests and the benchmark are in [Install, run and test](#install-run-and-test).
+
 [![CI](https://github.com/sparkainlp-x/oes512q-latch/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkainlp-x/oes512q-latch/actions/workflows/ci.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Status: research prototype](https://img.shields.io/badge/status-research%20prototype-orange.svg)](#what-it-is-not)
