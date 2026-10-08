@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "oes512q"
-version = "0.2.0"
+version = "0.2.1"
 description = "OES-32 / OES-512 classical residual latch (fixed or self-calibrated threshold) with an optional amplitude-encoded feature vector. Research prototype; not a stabilizer QEC code."
 readme = "README.md"
 requires-python = ">=3.10"

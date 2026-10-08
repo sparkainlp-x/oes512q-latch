@@ -16,10 +16,10 @@ identifiers:
     value: "10.5281/zenodo.22998570"
     description: "Concept DOI (all versions, Zenodo)"
   - type: doi
-    value: "10.5281/zenodo.22998571"
+    value: "10.5281/zenodo.22998768"
     description: "Version DOI for v0.2.0 (Zenodo)"
-version: "0.2.0"
-date-released: "2026-09-27"
+version: "0.2.1"
+date-released: "2026-10-08"
 abstract: >-
   Standard-library Python research prototype. OES-32 scores a 32-channel block
   with S = 0.45·Peak + 0.35·RMS + 0.20·MeanAbs and latches at S ≥ τ (default

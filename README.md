@@ -374,9 +374,9 @@ CI runs lint, format check, tests (including offline benchmark-harness tests on 
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff) (GitHub shows a "Cite this repository" button). Archived on Zenodo: concept DOI [10.5281/zenodo.22998570](https://doi.org/10.5281/zenodo.22998570) (all versions; resolves to the latest). The v0.2.0 archive is [10.5281/zenodo.22998571](https://doi.org/10.5281/zenodo.22998571).
+See [`CITATION.cff`](CITATION.cff) (GitHub shows a "Cite this repository" button). Archived on Zenodo: concept DOI [10.5281/zenodo.22998570](https://doi.org/10.5281/zenodo.22998570) (all versions; resolves to the latest). The v0.2.0 archive is [10.5281/zenodo.22998768](https://doi.org/10.5281/zenodo.22998768).
 
-> Brisson, J.-F. (2026). *oes512q-latch: OES-32 / OES-512 classical residual latch with a self-calibrated threshold and an optional amplitude-encoded feature vector* (v0.2.0) [Software]. Spark AI NLP. https://doi.org/10.5281/zenodo.22998571
+> Brisson, J.-F. (2026). *oes512q-latch: OES-32 / OES-512 classical residual latch with a self-calibrated threshold and an optional amplitude-encoded feature vector* (v0.2.0) [Software]. Spark AI NLP. https://doi.org/10.5281/zenodo.22998768
 
 ## Contributing and security
 
